@@ -10,6 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
 
+  eggnstone_flutter: any
 
 dev_dependencies:
   flutter_test:
