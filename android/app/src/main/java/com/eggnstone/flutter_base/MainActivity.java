@@ -1,4 +1,4 @@
-package com.eggnstone.flutter_base;
+package dev.eggnstone.flutter_base;
 
 import io.flutter.embedding.android.FlutterActivity;
 

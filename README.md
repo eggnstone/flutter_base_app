@@ -1,16 +1,55 @@
 # flutter_base
 
-A new Flutter project.
+A sample Flutter project using eggnstone services.
 
-## Getting Started
+# TODOs to run this example
 
-This project is a starting point for a Flutter application.
+## Add your own google-services.json file
 
-A few resources to get you started if this is your first Flutter project:
+* Download ```google-services.json``` from Firebase to ```android/app```
+* Download ```Info.plist``` from Firebase to ```ios/Runner```
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+# TODOs when building your own app
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Add your own google-services.json file
+
+* Download ```google-services.json``` from Firebase to ```android/app```
+* Download ```Info.plist``` from Firebase to ```ios/Runner``` 
+
+## "Plugin project :url_launcher_web not found. Please update settings.gradle."
+If you encounter this error then add the following to android/settings.gradle:
+```
+def flutterProjectRoot = rootProject.projectDir.parentFile.toPath()
+
+def plugins = new Properties()
+def pluginsFile = new File(flutterProjectRoot.toFile(), '.flutter-plugins')
+if (pluginsFile.exists()) {
+    pluginsFile.withReader('UTF-8') { reader -> plugins.load(reader) }
+}
+
+plugins.each { name, path ->
+    def pluginDirectory = flutterProjectRoot.resolve(path).resolve('android').toFile()
+    include ":$name"
+    project(":$name").projectDir = pluginDirectory
+}
+```
+
+## For Crashlytics to work add the following
+- Add in ```android/build.gradle``` to ```buildscript / repositories```
+```
+maven {
+    url 'https://maven.fabric.io/public'
+}
+```
+
+- Add in ```android/app/build.gradle``` to ```buildscript / dependencies```
+```
+    classpath 'com.google.gms:google-services:4.3.0'
+    classpath 'io.fabric.tools:gradle:1.26.1'
+```
+    
+- Add at the bottom of ```android/build.gradle```
+```
+apply plugin: 'io.fabric'
+apply plugin: 'com.google.gms.google-services'
+```
