@@ -16,36 +16,18 @@ A sample Flutter project using eggnstone services.
 * Download ```google-services.json``` from Firebase to ```android/app```
 * Download ```Info.plist``` from Firebase to ```ios/Runner``` 
 
-## "Plugin project :url_launcher_web not found. Please update settings.gradle."
-If you encounter this error then add the following to android/settings.gradle:
-```
-def flutterProjectRoot = rootProject.projectDir.parentFile.toPath()
-
-def plugins = new Properties()
-def pluginsFile = new File(flutterProjectRoot.toFile(), '.flutter-plugins')
-if (pluginsFile.exists()) {
-    pluginsFile.withReader('UTF-8') { reader -> plugins.load(reader) }
-}
-
-plugins.each { name, path ->
-    def pluginDirectory = flutterProjectRoot.resolve(path).resolve('android').toFile()
-    include ":$name"
-    project(":$name").projectDir = pluginDirectory
-}
-```
-
 ## For Crashlytics to work add the following
-- Add in ```android/build.gradle``` to ```buildscript / repositories```
+- In ```android/build.gradle``` add the following to ```buildscript / repositories```
 ```
 maven {
     url 'https://maven.fabric.io/public'
 }
 ```
 
-- Add in ```android/app/build.gradle``` to ```buildscript / dependencies```
+- In ```android/app/build.gradle``` add the following to ```buildscript / dependencies```
 ```
-    classpath 'com.google.gms:google-services:4.3.0'
-    classpath 'io.fabric.tools:gradle:1.26.1'
+classpath 'com.google.gms:google-services:4.3.0'
+classpath 'io.fabric.tools:gradle:1.26.1'
 ```
     
 - Add at the bottom of ```android/build.gradle```
