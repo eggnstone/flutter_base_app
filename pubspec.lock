@@ -46,23 +46,23 @@ packages:
   eggnstone_flutter:
     dependency: "direct main"
     description:
-      path: "../eggnstone_flutter"
-      relative: true
-    source: path
+      name: eggnstone_flutter
+      url: "https://pub.dartlang.org"
+    source: hosted
     version: "0.3.0"
   eggnstone_google_analytics:
     dependency: "direct main"
     description:
-      path: "../eggnstone_google_analytics"
-      relative: true
-    source: path
+      name: eggnstone_google_analytics
+      url: "https://pub.dartlang.org"
+    source: hosted
     version: "0.0.1"
   eggnstone_google_crashlytics:
     dependency: "direct main"
     description:
-      path: "../eggnstone_google_crashlytics"
-      relative: true
-    source: path
+      name: eggnstone_google_crashlytics
+      url: "https://pub.dartlang.org"
+    source: hosted
     version: "0.0.1"
   fake_async:
     dependency: transitive
@@ -363,7 +363,7 @@ packages:
       name: url_launcher
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "5.5.0"
+    version: "5.5.2"
   url_launcher_linux:
     dependency: transitive
     description:
@@ -391,7 +391,7 @@ packages:
       name: url_launcher_web
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.1.3"
+    version: "0.1.3+1"
   vector_math:
     dependency: transitive
     description:

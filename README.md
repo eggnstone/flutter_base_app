@@ -4,14 +4,14 @@ A sample Flutter project using eggnstone services.
 
 # TODOs to run this example
 
-## Add your own google-services.json file
+## Add your own google-services.json/Info.plist files
 
 * Download ```google-services.json``` from Firebase to ```android/app```
 * Download ```Info.plist``` from Firebase to ```ios/Runner```
 
 # TODOs when building your own app
 
-## Add your own google-services.json file
+## Add your own google-services.json/Info.plist files
 
 * Download ```google-services.json``` from Firebase to ```android/app```
 * Download ```Info.plist``` from Firebase to ```ios/Runner``` 
@@ -26,8 +26,8 @@ maven {
 
 - In ```android/app/build.gradle``` add the following to ```buildscript / dependencies```
 ```
-classpath 'com.google.gms:google-services:4.3.0'
-classpath 'io.fabric.tools:gradle:1.26.1'
+classpath 'com.google.gms:google-services:4.3.3'
+classpath 'io.fabric.tools:gradle:1.31.2'
 ```
     
 - Add at the bottom of ```android/build.gradle```

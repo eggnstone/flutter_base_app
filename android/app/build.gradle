@@ -54,5 +54,6 @@ flutter {
     source '../..'
 }
 
+// https://pub.dev/packages/firebase_crashlytics
 apply plugin: 'io.fabric'
 apply plugin: 'com.google.gms.google-services'

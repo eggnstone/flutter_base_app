@@ -4,24 +4,24 @@ description: A new Flutter project.
 version: 0.0.1+1
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.8.0 <3.0.0"
   flutter: ">=1.17.0 <2.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
 
-  #eggnstone_flutter: any
-  eggnstone_flutter:
-    path: ../eggnstone_flutter
+  eggnstone_flutter: any
+  #eggnstone_flutter:
+  #  path: ../eggnstone_flutter
 
-  #eggnstone_google_analytics: any
-  eggnstone_google_analytics:
-    path: ../eggnstone_google_analytics
+  eggnstone_google_analytics: any
+  #eggnstone_google_analytics:
+  #  path: ../eggnstone_google_analytics
 
-  #eggnstone_google_crashlytics: any
-  eggnstone_google_crashlytics:
-    path: ../eggnstone_google_crashlytics
+  eggnstone_google_crashlytics: any
+  #eggnstone_google_crashlytics:
+  #  path: ../eggnstone_google_crashlytics
 
 dev_dependencies:
   flutter_test:
